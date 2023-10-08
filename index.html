@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotos Recuerdo Ana Rosa</title>
-    <link rel="shortcut icon" href="mama/c06406bb-d2a9-49d2-970a-9a444425ea0b.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="mama/Fotosmovilana/c06406bb-d2a9-49d2-970a-9a444425ea0b.jpg" type="image/x-icon">
 </head>
 <style> 
     body {
@@ -128,7 +128,7 @@
     window.onload = function () { 
     // Variables 
     const IMAGENES = [ 
-    'https://raw.githubusercontent.com/SrWilson89/AnaRosa/main/mama/07a3b85e-707c-40e5-ba92-562722ca2f0f.jpg',
+        'https://raw.githubusercontent.com/SrWilson89/AnaRosa/main/mama/07a3b85e-707c-40e5-ba92-562722ca2f0f.jpg',
         'https://raw.githubusercontent.com/SrWilson89/AnaRosa/main/mama/0f2a2d2c-a205-4c79-8581-a28222ad98e7.jpg',
         'https://raw.githubusercontent.com/SrWilson89/AnaRosa/main/mama/1223a8dc-c57d-48df-85ae-94960874cbcb.jpg',
         'https://raw.githubusercontent.com/SrWilson89/AnaRosa/main/mama/176d514a-0082-403c-b3de-67ed59464679 (1).jpg',
@@ -156,9 +156,9 @@
     let $botonPlay = document.querySelector('#play'); 
     let $botonStop = document.querySelector('#stop'); 
     let intervalo; 
- 
+
     // Funciones 
- 
+
     /** 
      * Funcion que cambia la foto en la siguiente posicion 
      */ 
@@ -170,7 +170,7 @@
         } 
         renderizarImagen(); 
     } 
- 
+
     /** 
      * Funcion que cambia la foto en la anterior posicion 
      */ 
@@ -182,14 +182,14 @@
         } 
         renderizarImagen(); 
     } 
- 
+
     /** 
      * Funcion que actualiza la imagen de imagen dependiendo de posicionActual 
      */ 
     function renderizarImagen () { 
         $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`; 
     } 
- 
+
     /** 
      * Activa el autoplay de la imagen 
      */ 
@@ -200,9 +200,9 @@
         $botonRetroceder.setAttribute('disabled', true); 
         $botonPlay.setAttribute('disabled', true); 
         $botonStop.removeAttribute('disabled'); 
- 
+
     } 
- 
+
     /** 
      * Para el autoplay de la imagen 
      */ 
@@ -214,7 +214,7 @@
         $botonPlay.removeAttribute('disabled'); 
         $botonStop.setAttribute('disabled', true); 
     } 
- 
+
     // Eventos 
     $botonAvanzar.addEventListener('click', pasarFoto); 
     $botonRetroceder.addEventListener('click', retrocederFoto); 
@@ -223,16 +223,16 @@
     // Iniciar 
     renderizarImagen(); 
 } 
- 
+
 console.log(` 
- 
+
 ╔═══════════════════════╗ 
 ║ ╔═╗ ╔╦╦╦╦╗            ║ 
 ║ ║╚╬═╗║║║╠╣╠══╦═╦═╗ 8  ║ 
 ║ ╠╗║╠╝║║║║║╠╗╚╣║║║║ 9  ║ 
 ║ ╚═╩╝ ╚══╩╩╩══╩═╩╩╝    ║ 
 ╚═══════════════════════╝ 
- 
+
 `); 
- 
+
     </script>
