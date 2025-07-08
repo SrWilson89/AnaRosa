@@ -1,0 +1,151 @@
+:root {
+    --color-primario: #4e4b6b;
+    --color-secundario: #003521;
+    --color-fondo: #f6f7f9;
+    --color-texto: #333;
+    --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transicion: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--color-primario);
+    color: white;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.carousel {
+    width: 100%;
+    max-width: 1200px;
+    height: 70vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+}
+
+#imagen {
+    width: 70%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+    transition: var(--transicion);
+}
+
+#retroceder, #avanzar {
+    width: 60px;
+    height: 60px;
+    font-weight: bold;
+    font-size: 2rem;
+    border: none;
+    background-color: var(--color-primario);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transicion);
+}
+
+#retroceder:hover, #avanzar:hover {
+    background-color: var(--color-secundario);
+    transform: scale(1.1);
+}
+
+.controles {
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#play, #stop {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: var(--color-primario);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transicion);
+}
+
+#play:hover, #stop:hover {
+    background-color: var(--color-secundario);
+}
+
+#play img, #stop img {
+    width: 60%;
+    height: 60%;
+    filter: invert(1);
+}
+
+#contador {
+    font-size: 1rem;
+    color: var(--color-texto);
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    .carousel {
+        flex-direction: column;
+        height: auto;
+        gap: 0.5rem;
+    }
+    
+    #imagen {
+        width: 100%;
+        height: 50vh;
+    }
+    
+    #retroceder, #avanzar {
+        width: 100%;
+        height: 40px;
+        border-radius: 0;
+    }
+    
+    .controles {
+        flex-wrap: wrap;
+    }
+    
+    #contador {
+        width: 100%;
+        text-align: center;
+    }
+}
